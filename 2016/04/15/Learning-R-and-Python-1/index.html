@@ -4,80 +4,146 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>R｜Python语言学习笔记（1）——语言介绍 | 码农杂货铺</title>
+    <title>R｜Python语言学习笔记（2）——创建数据集 | 码农杂货铺</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="DeGeneres(大川)">
     
 
     
-    <meta name="description" content="数据科学家
+    <meta name="description" content="选择一种数据结构来存储数据
+讲数据输入或导入到这个数据结构中
 
-数据处理流程
-获取数据
-输入数据
-数据清理 — caret
-移除和转换不确定的数据 — na.omit(dt)
-移除异常值 — caret::nearZeroVar()
-确定并移除相关因子 — caret::findCorrelation()
-识别并去除线性相关性 — caret::findLinearCombos()
+R
+
+R支持的数据类型
+
+数值型
+
+布尔型
+
+字符串
+
+字节串
+
+复数型
 
 
-数据转换和预处理
-标准化
+
+R支持的数据集合
+
+向量
+
+矩阵
+
+数组
+
+数据框
+
+列表
 
 
 
+向量
 
-输出数据
-feature">
+c(1,2,3)
+1:3
+
+
+矩阵
+
+mymatrix &amp;lt;- matrix(vector, nrow=number_of_rows, ncol=number_of_colum">
 <meta property="og:type" content="article">
-<meta property="og:title" content="R｜Python语言学习笔记（1）——语言介绍">
-<meta property="og:url" content="http://yoursite.com/2016/04/15/Learning-R-and-Python/index.html">
+<meta property="og:title" content="R｜Python语言学习笔记（2）——创建数据集">
+<meta property="og:url" content="http://yoursite.com/2016/04/15/Learning-R-and-Python-1/index.html">
 <meta property="og:site_name" content="码农杂货铺">
-<meta property="og:description" content="数据科学家
+<meta property="og:description" content="选择一种数据结构来存储数据
+讲数据输入或导入到这个数据结构中
 
-数据处理流程
-获取数据
-输入数据
-数据清理 — caret
-移除和转换不确定的数据 — na.omit(dt)
-移除异常值 — caret::nearZeroVar()
-确定并移除相关因子 — caret::findCorrelation()
-识别并去除线性相关性 — caret::findLinearCombos()
+R
+
+R支持的数据类型
+
+数值型
+
+布尔型
+
+字符串
+
+字节串
+
+复数型
 
 
-数据转换和预处理
-标准化
+
+R支持的数据集合
+
+向量
+
+矩阵
+
+数组
+
+数据框
+
+列表
 
 
 
+向量
 
-输出数据
-feature">
-<meta property="og:updated_time" content="2016-04-15T00:17:07.000Z">
+c(1,2,3)
+1:3
+
+
+矩阵
+
+mymatrix &amp;lt;- matrix(vector, nrow=number_of_rows, ncol=number_of_colum">
+<meta property="og:updated_time" content="2016-04-15T01:20:03.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="R｜Python语言学习笔记（1）——语言介绍">
-<meta name="twitter:description" content="数据科学家
+<meta name="twitter:title" content="R｜Python语言学习笔记（2）——创建数据集">
+<meta name="twitter:description" content="选择一种数据结构来存储数据
+讲数据输入或导入到这个数据结构中
 
-数据处理流程
-获取数据
-输入数据
-数据清理 — caret
-移除和转换不确定的数据 — na.omit(dt)
-移除异常值 — caret::nearZeroVar()
-确定并移除相关因子 — caret::findCorrelation()
-识别并去除线性相关性 — caret::findLinearCombos()
+R
+
+R支持的数据类型
+
+数值型
+
+布尔型
+
+字符串
+
+字节串
+
+复数型
 
 
-数据转换和预处理
-标准化
+
+R支持的数据集合
+
+向量
+
+矩阵
+
+数组
+
+数据框
+
+列表
 
 
 
+向量
 
-输出数据
-feature">
+c(1,2,3)
+1:3
+
+
+矩阵
+
+mymatrix &amp;lt;- matrix(vector, nrow=number_of_rows, ncol=number_of_colum">
 
     
     <link rel="alternative" href="/atom.xml" title="码农杂货铺" type="application/atom+xml">
@@ -137,14 +203,14 @@ feature">
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2016/04/15/Learning-R-and-Python/" title="R｜Python语言学习笔记（1）——语言介绍" itemprop="url">R｜Python语言学习笔记（1）——语言介绍</a>
+      <a href="/2016/04/15/Learning-R-and-Python-1/" title="R｜Python语言学习笔记（2）——创建数据集" itemprop="url">R｜Python语言学习笔记（2）——创建数据集</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="DeGeneres(大川)" target="_blank" itemprop="author">DeGeneres(大川)</a>
 		
   <p class="article-time">
-    <time datetime="2016-04-15T00:14:08.000Z" itemprop="datePublished"> 发表于 2016-04-15</time>
+    <time datetime="2016-04-15T01:18:51.000Z" itemprop="datePublished"> 发表于 2016-04-15</time>
     
   </p>
 </header>
@@ -158,106 +224,136 @@ feature">
 		</div>
 		
 		<ul>
-<li><p>数据科学家</p>
-<ul>
-<li>数据处理流程<ul>
-<li>获取数据</li>
-<li>输入数据<ul>
-<li>数据清理 — caret<ul>
-<li>移除和转换不确定的数据 — na.omit(dt)</li>
-<li>移除异常值 — caret::nearZeroVar()</li>
-<li>确定并移除相关因子 — caret::findCorrelation()</li>
-<li>识别并去除线性相关性 — caret::findLinearCombos()</li>
-</ul>
-</li>
-<li>数据转换和预处理<ul>
-<li>标准化</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>输出数据</li>
-<li>feature的评估和选择<ul>
-<li>过滤</li>
-<li>封装</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>业务流程<ul>
-<li>获取数据</li>
-<li>数据整理</li>
-<li>数据注释</li>
-<li>数据分析＋可视化</li>
-<li>数据建模</li>
-<li>输出分析结果</li>
-</ul>
-</li>
-</ul>
+<li>选择一种数据结构来存储数据</li>
+<li><p>讲数据输入或导入到这个数据结构中</p>
 </li>
 <li><p>R</p>
+</li>
+<li><p>R支持的数据类型</p>
 <ul>
-<li>source——执行R脚本</li>
-<li>sink——设定输出<ul>
-<li>参数<ul>
-<li>append</li>
-<li>split</li>
-</ul>
+<li><p>数值型</p>
+</li>
+<li><p>布尔型</p>
+</li>
+<li><p>字符串</p>
+</li>
+<li><p>字节串</p>
+</li>
+<li><p>复数型</p>
 </li>
 </ul>
 </li>
-<li><p>保存图形结果</p>
+<li><p>R支持的数据集合</p>
 <ul>
-<li>pdf</li>
-<li>jpeg</li>
-<li>png</li>
-<li>bmp</li>
-<li>postscript</li>
-<li>win.metafile</li>
+<li><p>向量</p>
+</li>
+<li><p>矩阵</p>
+</li>
+<li><p>数组</p>
+</li>
+<li><p>数据框</p>
+</li>
+<li><p>列表</p>
+</li>
 </ul>
 </li>
-<li><p>dev.off() — clear the settings</p>
-</li>
-<li>packages<ul>
-<li>library() — show all the libraries</li>
-<li>search() — show all the libraries which have been loaded</li>
-<li>install.packages(’name’)</li>
-<li>update.packages(’name’)</li>
-<li>library(‘name’)</li>
-<li>help(package=‘vcd’)</li>
-</ul>
-</li>
-<li>终端执行R脚本：R CMD BATCH options infile outfile</li>
-</ul>
-</li>
-<li><p>Python数学工具</p>
+<li><p>向量</p>
 <ul>
-<li>Numpy<ul>
-<li>ndarray</li>
-<li>基础工具</li>
-<li>基本操作函数</li>
-<li>提供数据容器</li>
+<li>c(1,2,3)</li>
+<li>1:3</li>
 </ul>
 </li>
-<li>Pandas<ul>
+<li><p>矩阵</p>
+<ul>
+<li><p>mymatrix &lt;- matrix(vector, nrow=number_of_rows, ncol=number_of_columns, byrow=logical_value, dimnames=list(char_vector_rownames, char_vector_colnames))</p>
+</li>
+<li><p>切片操作</p>
+<ul>
+<li>mx1[1,]</li>
+<li>mx1[1,2]</li>
+<li>mx1[,1]</li>
+<li>mx1[,1:3]</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>数组<ul>
+<li>myarray &lt;- array(vector,dimensions,dimnames)</li>
+</ul>
+</li>
+<li>数据框<ul>
+<li>data.frame(vectors)</li>
+<li>data.frame(cbind(vectors))</li>
+</ul>
+</li>
+<li><p>列关联表table(patientdata$age,patientdata$name)</p>
+<ul>
+<li><p>引入数据框</p>
+<ul>
+<li>attach()</li>
+<li>detach()</li>
+<li>with(dataframe,{操作})块 &lt;- | &lt;&lt;-</li>
+</ul>
+</li>
+<li><p>实例标识</p>
+<ul>
+<li>patientdata&lt;-data.frame(patientID,names,ages,row.names=patientID)</li>
+</ul>
+</li>
+<li><p>取数据</p>
+<ul>
+<li>patientdata$name</li>
+<li>patientdata[‘name’]</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Python</p>
+</li>
+<li>向量｜数组｜矩阵——都是array()<ul>
+<li>mx=np.arange(1:10).reshape(2,5)</li>
+<li>数据切片<ul>
+<li>mx[1,]==mx[1,:]</li>
+<li>mx[:,1] — n*1</li>
+<li>mx[,1] — wrong!</li>
+<li>mx[,[1]] — 1*n</li>
+<li>mx[,0:2]</li>
+</ul>
+</li>
+<li>逻辑操作<ul>
+<li>dropna()</li>
+<li>fillna()</li>
+<li>notnull()</li>
+<li>np.where(condition,a,b)</li>
+<li>np.take()</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>数据框</p>
+<ul>
+<li>from pandas import DataFrame</li>
 <li>DataFrame</li>
-<li>兼容电子表格和关系数据库</li>
-<li>高性能时间序列</li>
+<li>class pandas.DataFrame(data=None, index=None, columns=None, dtype=None, copy=False)<ul>
+<li>data: ndarray | dataframe | dict</li>
+<li>index: get column from data</li>
+<li>columns: list or tuple of column names</li>
 </ul>
 </li>
-<li>matplotlib<ul>
-<li>绘制图表的Python库</li>
 </ul>
 </li>
-<li>IPython<ul>
-<li>交互式探索计算</li>
-<li>集成大量第三方组件</li>
+<li><p>小技巧——Python</p>
+<ul>
+<li>import os | os.getcwd() os.chdir(’newpath’)</li>
+<li>import json | json.loads</li>
+<li>from collections import defaultdict</li>
+<li>from collections import Counter</li>
 </ul>
 </li>
-<li>SciPy<ul>
-<li>解决科学计算中标准问题域的包</li>
-</ul>
-</li>
+<li><p>小技巧——R</p>
+<ul>
+<li>table(f)</li>
+<li>table(f$age)</li>
 </ul>
 </li>
 </ul>
@@ -278,7 +374,7 @@ feature">
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://yoursite.com/2016/04/15/Learning-R-and-Python/" data-title="R｜Python语言学习笔记（1）——语言介绍 | 码农杂货铺" data-tsina="null" class="share clearfix">
+	  <div data-url="http://yoursite.com/2016/04/15/Learning-R-and-Python-1/" data-title="R｜Python语言学习笔记（2）——创建数据集 | 码农杂货铺" data-tsina="null" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -291,19 +387,11 @@ feature">
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2016/04/15/Learning-R-and-Python-1/" title="R｜Python语言学习笔记（2）——创建数据集">
-  <strong>上一篇：</strong><br/>
-  <span>
-  R｜Python语言学习笔记（2）——创建数据集</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2016/04/10/PM-Duty/"  title="产品部门及产品经理职责">
+<a href="/2016/04/15/Learning-R-and-Python/"  title="R｜Python语言学习笔记（1）——语言介绍">
  <strong>下一篇：</strong><br/> 
- <span>产品部门及产品经理职责
+ <span>R｜Python语言学习笔记（1）——语言介绍
 </span>
 </a>
 </div>
@@ -312,7 +400,7 @@ feature">
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2016/04/15/Learning-R-and-Python/" data-title="R｜Python语言学习笔记（1）——语言介绍" data-url="http://yoursite.com/2016/04/15/Learning-R-and-Python/"></div>
+	<div class="ds-thread" data-thread-key="2016/04/15/Learning-R-and-Python-1/" data-title="R｜Python语言学习笔记（2）——创建数据集" data-url="http://yoursite.com/2016/04/15/Learning-R-and-Python-1/"></div>
 </section>
 
 

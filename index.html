@@ -81,6 +81,197 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2016/04/15/Learning-R-and-Python-1/" title="R｜Python语言学习笔记（2）——创建数据集" itemprop="url">R｜Python语言学习笔记（2）——创建数据集</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="DeGeneres(大川)" target="_blank" itemprop="author">DeGeneres(大川)</a>
+		
+  <p class="article-time">
+    <time datetime="2016-04-15T01:18:51.000Z" itemprop="datePublished"> 发表于 2016-04-15</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <ul>
+<li>选择一种数据结构来存储数据</li>
+<li><p>讲数据输入或导入到这个数据结构中</p>
+</li>
+<li><p>R</p>
+</li>
+<li><p>R支持的数据类型</p>
+<ul>
+<li><p>数值型</p>
+</li>
+<li><p>布尔型</p>
+</li>
+<li><p>字符串</p>
+</li>
+<li><p>字节串</p>
+</li>
+<li><p>复数型</p>
+</li>
+</ul>
+</li>
+<li><p>R支持的数据集合</p>
+<ul>
+<li><p>向量</p>
+</li>
+<li><p>矩阵</p>
+</li>
+<li><p>数组</p>
+</li>
+<li><p>数据框</p>
+</li>
+<li><p>列表</p>
+</li>
+</ul>
+</li>
+<li><p>向量</p>
+<ul>
+<li>c(1,2,3)</li>
+<li>1:3</li>
+</ul>
+</li>
+<li><p>矩阵</p>
+<ul>
+<li><p>mymatrix &lt;- matrix(vector, nrow=number_of_rows, ncol=number_of_columns, byrow=logical_value, dimnames=list(char_vector_rownames, char_vector_colnames))</p>
+</li>
+<li><p>切片操作</p>
+<ul>
+<li>mx1[1,]</li>
+<li>mx1[1,2]</li>
+<li>mx1[,1]</li>
+<li>mx1[,1:3]</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>数组<ul>
+<li>myarray &lt;- array(vector,dimensions,dimnames)</li>
+</ul>
+</li>
+<li>数据框<ul>
+<li>data.frame(vectors)</li>
+<li>data.frame(cbind(vectors))</li>
+</ul>
+</li>
+<li><p>列关联表table(patientdata$age,patientdata$name)</p>
+<ul>
+<li><p>引入数据框</p>
+<ul>
+<li>attach()</li>
+<li>detach()</li>
+<li>with(dataframe,{操作})块 &lt;- | &lt;&lt;-</li>
+</ul>
+</li>
+<li><p>实例标识</p>
+<ul>
+<li>patientdata&lt;-data.frame(patientID,names,ages,row.names=patientID)</li>
+</ul>
+</li>
+<li><p>取数据</p>
+<ul>
+<li>patientdata$name</li>
+<li>patientdata[‘name’]</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Python</p>
+</li>
+<li>向量｜数组｜矩阵——都是array()<ul>
+<li>mx=np.arange(1:10).reshape(2,5)</li>
+<li>数据切片<ul>
+<li>mx[1,]==mx[1,:]</li>
+<li>mx[:,1] — n*1</li>
+<li>mx[,1] — wrong!</li>
+<li>mx[,[1]] — 1*n</li>
+<li>mx[,0:2]</li>
+</ul>
+</li>
+<li>逻辑操作<ul>
+<li>dropna()</li>
+<li>fillna()</li>
+<li>notnull()</li>
+<li>np.where(condition,a,b)</li>
+<li>np.take()</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>数据框</p>
+<ul>
+<li>from pandas import DataFrame</li>
+<li>DataFrame</li>
+<li>class pandas.DataFrame(data=None, index=None, columns=None, dtype=None, copy=False)<ul>
+<li>data: ndarray | dataframe | dict</li>
+<li>index: get column from data</li>
+<li>columns: list or tuple of column names</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>小技巧——Python</p>
+<ul>
+<li>import os | os.getcwd() os.chdir(’newpath’)</li>
+<li>import json | json.loads</li>
+<li>from collections import defaultdict</li>
+<li>from collections import Counter</li>
+</ul>
+</li>
+<li><p>小技巧——R</p>
+<ul>
+<li>table(f)</li>
+<li>table(f$age)</li>
+</ul>
+</li>
+</ul>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/数据科学/">数据科学</a><a href="/tags/十天学习一门语言/">十天学习一门语言</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2016/04/15/Learning-R-and-Python-1/#comments" class="ds-thread-count comments-count-link" data-thread-key="2016/04/15/Learning-R-and-Python-1/" data-count-type="comments">&nbsp;</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2016/04/15/Learning-R-and-Python/" title="R｜Python语言学习笔记（1）——语言介绍" itemprop="url">R｜Python语言学习笔记（1）——语言介绍</a>
   </h1>
   <p class="article-author">By
@@ -526,23 +717,23 @@
 		<ul class="clearfix">
 		
 			
+				<li><a href="/tags/数据科学/" title="数据科学">数据科学<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/十天学习一门语言/" title="十天学习一门语言">十天学习一门语言<sup>2</sup></a></li>
+			
+		
+			
 				<li><a href="/tags/博客/" title="博客">博客<sup>2</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/数据科学/" title="数据科学">数据科学<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/十天学习一门语言/" title="十天学习一门语言">十天学习一门语言<sup>1</sup></a></li>
+				<li><a href="/tags/产品/" title="产品">产品<sup>1</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/心路/" title="心路">心路<sup>1</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/产品/" title="产品">产品<sup>1</sup></a></li>
 			
 		
 		</ul>
