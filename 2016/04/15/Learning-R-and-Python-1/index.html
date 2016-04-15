@@ -99,7 +99,7 @@ c(1,2,3)
 矩阵
 
 mymatrix &amp;lt;- matrix(vector, nrow=number_of_rows, ncol=number_of_colum">
-<meta property="og:updated_time" content="2016-04-15T01:20:03.000Z">
+<meta property="og:updated_time" content="2016-04-15T08:33:09.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="R｜Python语言学习笔记（2）——创建数据集">
 <meta name="twitter:description" content="选择一种数据结构来存储数据
@@ -308,11 +308,116 @@ mymatrix &amp;lt;- matrix(vector, nrow=number_of_rows, ncol=number_of_colum">
 </li>
 </ul>
 </li>
+<li><p>feature</p>
+<ul>
+<li><p>名义型：只是一个名字比如person name</p>
+</li>
+<li><p>有序型：有一定逻辑顺序关系，例如：young，old，elder</p>
+</li>
+<li><p>连续型：连续数字</p>
+</li>
+<li><p>因子</p>
+<ul>
+<li><p>数据统计考虑，需要把名义型和有序型转化为数值表达——通过factor()</p>
+</li>
+<li><p>名义型</p>
+</li>
+<li><p>有序型</p>
+</li>
+<li>factor()</li>
+<li><p>status &lt;- factor(patientdata, order=TRUE, levels=c(“Poor”,”Improved”,”Excellent”))</p>
+</li>
+<li><p>如果默认情况对于字符型feature会转化为有序型数据，当时顺序是按照字母顺序，因此为了避免和实际问题不符合，需要通过设定参数，order=TRUE, levels=c(…)</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>列表</p>
+<ul>
+<li><p>用途</p>
+<ul>
+<li><p>可以作为不同类型和结构的数据的集合</p>
+</li>
+<li><p>许多函数的返回结果为列表类型</p>
+</li>
+</ul>
+</li>
+<li><p>不同类型对象的有序结合</p>
+</li>
+<li><p>If a column has a name, you can retrieve the data in this column by its name, or else you can retrieve it by index like l1[[2]]</p>
+</li>
+<li><p>取值</p>
+<ul>
+<li>c1&lt;-1:10</li>
+<li>c2&lt;-1:10</li>
+<li>l1&lt;-list(c1=c1,c2=c2)</li>
+<li>l2&lt;-list(l1=l1,c1,c2)</li>
+<li>l2[1]取到的是整个l1</li>
+<li>l2[[1]] get the value of l1</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>数据输入</p>
+<ul>
+<li><p>The source of data: 键盘｜文本｜统计软件｜数据库</p>
+</li>
+<li><p>键盘</p>
+<ul>
+<li><p>先定义一个dataframe结构</p>
+</li>
+<li><p>通过edit()函数来通过键盘输入数据</p>
+</li>
+</ul>
+</li>
+<li><p>读入分隔符文件</p>
+<ul>
+<li>mydataframe &lt;- read.table(file, header=logical_value(bool), sep=‘delimiter’,row.names=“name”)</li>
+<li>header布尔值，表明第一行是不是列名</li>
+</ul>
+</li>
+<li><p>字符型变量自动转换为因子</p>
+<ul>
+<li>stringsAsFactors＝FALSE</li>
+</ul>
+</li>
+<li>Excel<ul>
+<li>RODBC</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>数据集标注</p>
+<ul>
+<li><p>用途</p>
+<ul>
+<li><p>为变量名添加描述标签</p>
+</li>
+<li><p>类别型变量的值标签</p>
+</li>
+</ul>
+</li>
+<li><p>变量标签</p>
+<ul>
+<li>It is used to comment the name of the column to give it more information. However there is no effective way to do this</li>
+<li>names(patientsdata)[2]&lt;-“The first age to enter the hospital.” — This will override the original name — ‘age’ of that column</li>
+</ul>
+</li>
+<li><p>值标签</p>
+<ul>
+<li>不是很理解</li>
+</ul>
+</li>
+</ul>
+</li>
 <li><p>Python</p>
 </li>
-<li>向量｜数组｜矩阵——都是array()<ul>
+<li><p>向量｜数组｜矩阵——都是array()</p>
+<ul>
 <li>mx=np.arange(1:10).reshape(2,5)</li>
-<li>数据切片<ul>
+<li><p>数据切片</p>
+<ul>
 <li>mx[1,]==mx[1,:]</li>
 <li>mx[:,1] — n*1</li>
 <li>mx[,1] — wrong!</li>
@@ -320,7 +425,8 @@ mymatrix &amp;lt;- matrix(vector, nrow=number_of_rows, ncol=number_of_colum">
 <li>mx[,0:2]</li>
 </ul>
 </li>
-<li>逻辑操作<ul>
+<li><p>逻辑操作</p>
+<ul>
 <li>dropna()</li>
 <li>fillna()</li>
 <li>notnull()</li>
@@ -334,12 +440,19 @@ mymatrix &amp;lt;- matrix(vector, nrow=number_of_rows, ncol=number_of_colum">
 <ul>
 <li>from pandas import DataFrame</li>
 <li>DataFrame</li>
-<li>class pandas.DataFrame(data=None, index=None, columns=None, dtype=None, copy=False)<ul>
-<li>data: ndarray | dataframe | dict</li>
-<li>index: get column from data</li>
-<li>columns: list or tuple of column names</li>
+<li>class pandas.DataFrame(data=None, index=None, columns=None, dtype=None, copy=False)</li>
 </ul>
 </li>
+</ul>
+<pre><code>- data: ndarray | dataframe | dict
+- index: get column from data
+- columns: list or tuple of column names
+</code></pre><ul>
+<li>Python如何把有序型变量转化为因子，类比R的factor</li>
+<li>Python中有没有对应R列表的数据结构</li>
+<li><p>Python数据读入</p>
+<ul>
+<li>loadtxt(filesource,delimiter=‘,’,usecols=(1,2,3),unpack=True)</li>
 </ul>
 </li>
 <li><p>小技巧——Python</p>
